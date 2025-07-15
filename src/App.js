@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Adduser from './Components/Adduser';
+import Searchuser from './Components/Searchuser';
+import Deleteuser from './Components/Deleteuser';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Viewuser from './Components/Viewuser';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/add' element={<Adduser/>}/>
+        <Route path='/search' element={<Searchuser/>}/>
+        <Route path='/delete' element={<Deleteuser/>}/>
+        <Route path='/view' element={<Viewuser/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
