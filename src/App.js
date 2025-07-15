@@ -4,7 +4,7 @@ import Adduser from './Components/Adduser';
 import Searchuser from './Components/Searchuser';
 import Deleteuser from './Components/Deleteuser';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home';
+import Home from './Components/Home';
 import Viewuser from './Components/Viewuser';
 
 function App() {
